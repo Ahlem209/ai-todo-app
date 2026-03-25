@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CineExplorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>CineExplorer</h1>
+    <form id="searchForm">
+      <input id="query" type="search" placeholder="Rechercher un film..." required />
+      <button type="submit">Rechercher</button>
+    </form>
+  </header>
+
+  <main>
+    <section id="results" class="grid"></section>
+    <nav class="pagination">
+      <button id="prev" disabled>Précédent</button>
+      <span id="pageInfo"></span>
+      <button id="next" disabled>Suivant</button>
+    </nav>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
